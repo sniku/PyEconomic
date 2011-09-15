@@ -1,0 +1,14 @@
+Simple abstraction layer that exposes e-conimic SOAP API to python.
+
+Usage:
+>>> from pyeconomic import PyEconomic
+>>> e = PyEconomic(agreement_id, user_id, password, wsdl_url)
+>>> debtors = e.call('Debtor_GetAll') # get all customers
+>>> e.create_customer(7, u"Mr. White Hat Spammer") # create new customer
+>>> my_customer = e.call('Debtor_FindByNumber', number=7) # get newly created customer
+
+API documentation: https://www.e-conomic.com/secure/api1/EconomicWebService.asmx
+
+Bug reports and enhancements are very welcome!
+
+Code courtesy of getanewsletter.com
